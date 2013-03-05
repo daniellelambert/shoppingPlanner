@@ -1319,3 +1319,8 @@ p a:hover {
 .footer ul li a:hover {
 	text-decoration:underline;
 }
+/*------------------------- Danielle's additions ------------------------*/
+.body .content-about div.featured p .dishes {
+	font-size: 26px;
+
+}
