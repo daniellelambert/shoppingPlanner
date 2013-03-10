@@ -9,7 +9,10 @@
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
+DROP DATABASE IF EXISTS mealplanner;
+CREATE DATABASE IF NOT EXISTS mealplanner;
+GRANT ALL PRIVILEGES ON mealplanner.* TO 'Mealuser'@'localhost' identified by 'user';
+use mealplanner;
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
