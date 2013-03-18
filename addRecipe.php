@@ -7,8 +7,18 @@ session_start();
 	include "db_connect.php";
 	
 $recipe = $_POST;
-$recipe_name = $recipe['Dish_Name'];
-$directions = $recipe['directions'];
+#string
+$recipe_name = (isSet($recipe['Dish_Name']) ? $recipe['Dish_Name'] : 'placeHolder');
+#string
+$directions = (isSet($recipe['directions']) ? $recipe['directions'] : 'placeHolder');
+#string
+$description =  (isSet($recipe['description']) ? $recipe['description'] : 'placeHolder');
+#time (maybe date time?
+$cook_time = (isSet($recipe['cook_time']) ? $recipe['cook_time'] : '00:00:00');
+#string
+$comment = (isSet($recipe['comments']) ? $recipe['comments'] : 'placeHolder');
+#number
+$sides = (isSet($recipe['sideDish']) ? $recipe['sideDish'] : -1);
 
 echo "name: ".$recipe['Dish_Name']."<br/>";
 echo "directions: ".$recipe['directions']."<br/>";
@@ -23,7 +33,7 @@ echo "directions: ".$recipe['directions']."<br/>";
 	}
 	#recipe order: id, name, description, instructions(directions), cook_time, rating, comments, last_cook_week, date_added, side_dishes, pic_location
 			#Add it to database, remember to add dummy values for any slots not filled in
-	$insert_recipe =  "INSERT INTO recipe VALUES (null, '".$recipe_name."', 'placeHolder','".$directions."', '00:00:00', 1, 'placeholder', '0000-00-00', CURDATE(), -1, 'placeholder')";
+	$insert_recipe =  "INSERT INTO recipe VALUES (null, '".$recipe_name."', '".$description."','".$directions."', '".$cook_time."', 1, '".$comment."', '0000-00-00', CURDATE(),".$sides.", 'placeholder')";
 	 $result_insert_food =mysqli_query($db, $insert_recipe) OR DIE (mysqli_error($db));
 
 
@@ -58,7 +68,7 @@ if ($food_result == null){
  $insert_ingredient = "INSERT INTO ingredient VALUES ((select MAX(food.food_id) from food), (select MAX(recipe.recipe_id) from recipe), '$amt', '$unit')";
 	$result_insert_ingredient =mysqli_query($db, $insert_ingredient) OR DIE (mysqli_error($db));
  }
-
+	echo "<p><a href=\"index.html\">Continue</a></p>";	
 ?>
 
 </body> </html>
@@ -72,6 +82,5 @@ $result = mysqli_query($db, $query);
 return ($row);
 
 }
-
 
 ?>
