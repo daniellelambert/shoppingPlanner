@@ -7,18 +7,20 @@ session_start();
 	include "db_connect.php";
 	
 $recipe = $_POST;
+ 
+
 #string
-$recipe_name = (isSet($recipe['Dish_Name']) ? $recipe['Dish_Name'] : 'placeHolder');
+$recipe_name = (isSet($recipe['Dish_Name']) ? mysqli_real_escape_string($db, trim($recipe['Dish_Name'])) : 'placeHolder');
 #string
-$directions = (isSet($recipe['directions']) ? $recipe['directions'] : 'placeHolder');
+$directions = (isSet($recipe['directions']) ? mysqli_real_escape_string($db, trim($recipe['directions'])) : 'placeHolder');
 #string
-$description =  (isSet($recipe['description']) ? $recipe['description'] : 'placeHolder');
+$description =  (isSet($recipe['description']) ? mysqli_real_escape_string($db, trim($recipe['description'])) : 'placeHolder');
 #time (maybe date time?
-$cook_time = (isSet($recipe['cook_time']) ? $recipe['cook_time'] : '00:00:00');
+$cook_time = (isSet($recipe['cook_time']) ? mysqli_real_escape_string($db, trim($recipe['cook_time'])) : '00:00:00');
 #string
-$comment = (isSet($recipe['comments']) ? $recipe['comments'] : 'placeHolder');
+$comment = (isSet($recipe['comments']) ? mysqli_real_escape_string($db, trim($recipe['comments'])) : 'placeHolder');
 #number
-$sides = (isSet($recipe['sideDish']) ? $recipe['sideDish'] : -1);
+$sides = (isSet($recipe['sideDish']) ? mysqli_real_escape_string($db, trim($recipe['sideDish'])) : -1);
 
 echo "name: ".$recipe['Dish_Name']."<br/>";
 echo "directions: ".$recipe['directions']."<br/>";
@@ -52,7 +54,7 @@ $food_result = getFood($v['Food_Name'], $db);
 if ($food_result == null){
 #if it isn't in the db, add it.
  echo "<h3>Inserting food into db!</h3>  ".$v['Food_Name']."<br/>";
- $insert_food =  "INSERT INTO food VALUES (null, '".$v['Food_Name']."', 'placeHolder')";
+ $insert_food =  "INSERT INTO food VALUES (null, '".mysqli_real_escape_string($db, trim($v['Food_Name']))."', 'placeHolder')";
  $result_insert_food =mysqli_query($db, $insert_food) OR DIE ("ERROR INSERTING FOOD".$insert_food);
  if ( $result_insert_food == false){
 	echo "ERROR inserting food";
@@ -63,8 +65,8 @@ if ($food_result == null){
  }
 #Adding ingredient
  echo $food_result['food_id']."    I'm here!";
- $amt = $v['Amt'];
- $unit = $v['Unit'];
+ $amt = mysqli_real_escape_string($db, trim($v['Amt']));
+ $unit = mysqli_real_escape_string($db, trim($v['Unit']));
  $insert_ingredient = "INSERT INTO ingredient VALUES ((select MAX(food.food_id) from food), (select MAX(recipe.recipe_id) from recipe), '$amt', '$unit')";
 	$result_insert_ingredient =mysqli_query($db, $insert_ingredient) OR DIE (mysqli_error($db));
  }

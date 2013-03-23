@@ -31,7 +31,7 @@
 	}
 	
 		echo $row['instructions'].'<br/>';
-	
+		echo "<form id='formID' action='modifyRecipe.php' method='POST'> <input type='hidden' name='id' value=".$recipe_id." /> <input type='submit' value='Modify This Recipe!' /> </form><br/>";
 		echo "<form id='formID' action='deleteRecipe.php' method='POST'> <input type='hidden' name='id' value=".$recipe_id." /> <input type='submit' value='Delete This Recipe!' /> </form>";
 	?>
 
