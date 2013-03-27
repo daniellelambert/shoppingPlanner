@@ -1,10 +1,57 @@
+<!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
 <html>
-<?php
+<head>
+	<meta charset="UTF-8">
+	<title>Browse Recipes - Shopping Planner</title>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+</head>
+<body>
+	<div id="background-yellow">
+		background
+	</div>
+	<div class="page">
+		<div class="about-page">
+			<div class="sidebar">
+				<a href="index.html" id="logo">Shopping <br/>Planner</a>
+				<ul>
+					<li class="home">
+						<a href="index.html">Home</a>
+					</li>
+					<li class="selected about">
+						<a href="browseRecipes.php">Browse Recipes</a>
+					</li>
+					<li class="projects">
+						<a href="mealPlan.html">Meal Plan</a>
+					</li>
+					<li class="blog">
+						<a href="addRecipes.html">Add Recipes</a>
+					</li>
+					<li class="contact">
+						<a href="contact.html">Logout</a>
+					</li>
+				</ul>
+				<div class="connect">
+					<a href="http://freewebsitetemplates.com/go/facebook/" id="fb">facebook</a> <a href="http://freewebsitetemplates.com/go/twitter/" id="twitter">twitter</a> <a href="http://freewebsitetemplates.com/go/googleplus/" id="googleplus">google+</a> <a href="http://freewebsitetemplates.com/go/youtube/" id="youtube">youtube</a>
+				</div>
+			</div>
+			<div class="body">
+				<div class="content-about">
+					<div>
+						<h3>Browse Recipes</h3>
+					</div>
+					<div class="featured">
+						<img src="images/dining-room.jpg" alt="">
+					</div>
+					<div>
+						<div>
+							<p class="dishes">
+							<?php
 		include "db_connect.php";
 		
 		$query = 'SELECT * FROM recipe';
 		$result = mysqli_query($db, $query);
-		echo '<table> <tr><td>name</td> <td>cook time</td> <td>rating</td> <td>last cook</td></tr>';
+		echo '<table> <tr><td><h1>Name</h1></td> <td>cook time</td> <td>rating</td> <td>last cook</td></tr>';
 		while (	$row = mysqli_fetch_array($result)){
 	#recipe order: id, name, description, instructions(directions), cook_time, rating, comments, last_cook_week, date_added, side_dishes, pic_location	
 	echo '<tr>';
@@ -19,11 +66,76 @@
 		$added = $row['date_added'];
 		$side_dishes = $row['side_dishes'];
 		$pic = $row['pic_location'];
-	echo '<td><a href="viewRecipe.php?id='.$id.'">'.$name.' </a></td><td>'.$cook_time.'</td><td>'.$rating.'</td><td>'.$last_cook.'</td>';
+	echo '<td><a href="viewRecipe.php?id='.$id.'"><h1>'.$name.' </a></h1></td><td>'.$cook_time.'</td><td>'.$rating.'</td><td>'.$last_cook.'</td>';
 	
 	echo '</tr>';
 
 		}
 	echo '</table>';
 ?>
-
+								<br><br>
+								<br><br>
+								Ignore this stuff here, I will fix it and format it so it's prettier.  Enter a short description here about the dish.</p><a href="http://www.freewebsitetemplates.com/about/terms">Edit this dish</a> <img src="images/dinner3.png" alt="">
+							<br><br>
+						</div>
+						<div class="sidebar">
+							<div>
+								<h3>Browse By</h3>
+								<a href="#">Entrees</a> <a href="#">Side Dishes</a><a href="#">Ratings</a><a href="#">Favorites</a>
+							</div>
+							<div>
+								<h3>Search</h3>
+								<ul>
+									<li>
+										<input type="text" value="Pizza *" onblur="this.value=!this.value?'Pizza *':this.value;" onfocus="this.select()" onclick="this.value='';">
+									</li>
+									<li>
+										
+									</li>
+									<li>
+										
+									</li>
+								</ul>
+								<ul>
+									<li>
+										<input type="submit" class="submit" value="Search">
+									</li>
+									<li>
+										
+									</li>
+									<li>
+										
+									</li>
+								</ul>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+				<div class="footer">
+					<p>
+						&#169; 2023 Origins Interior Architects
+					</p>
+					<ul>
+						<li>
+							<a href="index.html">Home</a>
+						</li>
+						<li>
+							<a href="browseRecipes.php">About</a>
+						</li>
+						<li>
+							<a href="mealPlan.html">Projects</a>
+						</li>
+						<li>
+							<a href="addRecipes.html">Blog</a>
+						</li>
+						<li>
+							<a href="contact.html">Contact</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
