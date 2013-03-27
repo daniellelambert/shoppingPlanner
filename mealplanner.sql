@@ -110,6 +110,7 @@ CREATE TABLE IF NOT EXISTS `meal_plan` (
 
 CREATE TABLE IF NOT EXISTS `recipe` (
   `recipe_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `recipe_name` VARCHAR(50) NOT NULL,
   `description` blob NOT NULL,
   `instructions` blob NOT NULL,
   `cook_time` time NOT NULL,
