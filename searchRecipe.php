@@ -24,10 +24,10 @@
 					<li class="projects">
 						<a href="mealPlan.html">Meal Plan</a>
 					</li>
-					<li class="selected blog">
+					<li class="blog">
 						<a href="addRecipes.html">Add Recipes</a>
 					</li>
-					<li class="contact">
+					<li class="selected contact">
 						<a href="searchRecipe.php">Search Recipe</a>
 					</li>
 				</ul>
@@ -39,7 +39,7 @@
 				<div class="content-blog-single">
 					<div>
 						<div>
-							<h3>Add Recipes</h3>
+							<h3>Search Recipes</h3>
 							<div class="paging">
 								
 							</div>
@@ -49,27 +49,16 @@
 									
 									<div class="section">
 										<div>
+											<?php
+                                            
+                                            if (isset($_POST['search'])){
 											
-											<form id='formID' action='addRecipe.php' method='POST'>
-												<h4>Add Dish</h4>
-												<input type="text" value="Recipe Name*" name='Dish_Name' onblur="this.value=!this.value?'Title *':this.value;" onfocus="this.select()" onclick="this.value='';">
-											<div id='ingredientDiv'> 
-												<table><tr><td><input type="text" style="width:100px;" value="Amount*" id='foodAmount' name='food[0][Amt]' onblur="this.value=!this.value?'Amount *':this.value;" onfocus="this.select()" onclick="this.value='';"></td>
-												<td><input type="text" value="Units*" style="width:100px;" id='Units' name='food[0][Unit]'onblur="this.value=!this.value?'Units *':this.value;" onfocus="this.select()" onclick="this.value='';"></td>
-												<td><input type="text" style="width:100px;" value="Of*" id='food_Name' name='food[0][Food_Name]' onblur="this.value=!this.value?'of *':this.value;" onfocus="this.select()" onclick="this.value='';"></td></tr>
-												</table>
-												</div>
+											echo "Hello";	
 												
-												<br/>
-												<input type='button' value='More Ingredients' onClick='AddIngredient()'> <br/>
-												<textarea form='formID' name='directions'id="comment" cols="30" rows="10" onblur="this.value=!this.value?'Directions':this.value;" onfocus="this.select()" onclick="this.value='';">Directions</textarea>
-												<textarea name='description' form='formID'id="comment" cols="30" rows="10" onblur="this.value=!this.value?'Description':this.value;" onfocus="this.select()" onclick="this.value='';">Description</textarea>
-												Cook Time: <input type='text' style="width:75px;" name='cook_time'/><br/>
-												<input type="text" value="Comments*" name='comments'onblur="this.value=!this.value?'Comments *':this.value;" onfocus="this.select()" onclick="this.value='';">
-												Main Dish? <input type="checkbox" id='mainDishCBox' onClick="mainDishCheck()">
-												<div id='mainDish' style="width:50px;" style="visibility:hidden" > <input type='number' name='sideDish'> </div>
-												<br/><input type="submit" id="submit" value="Submit">
-											</form>
+											}
+                                            
+                                            ?>
+											
 										</div>
 									</div>
 								</li>
@@ -77,7 +66,11 @@
 						</div>
 						<div class="sidebar">
 							<div>
-							
+								<h3>Search Recipe</h3>
+								<form action="searchRecipe.php">
+									<input type="text" name="search" value="Search recipe here..." onblur="this.value=!this.value?'Search recipe here...':this.value;" onfocus="this.select()" onclick="this.value='';">
+									<input type="submit" value="">
+								</form>
 							</div>
 							
 							<div>

@@ -28,7 +28,7 @@
 						<a href="addRecipes.html">Add Recipes</a>
 					</li>
 					<li class="contact">
-						<a href="contact.html">Logout</a>
+						<a href="searchRecipe.php">Search Recipe</a>
 					</li>
 				</ul>
 				<div class="connect">
@@ -127,10 +127,10 @@
 							<a href="mealPlan.html">Projects</a>
 						</li>
 						<li>
-							<a href="addRecipes.html">Blog</a>
+							<a href="addRecipes.html">Add Recipe</a>
 						</li>
 						<li>
-							<a href="contact.html">Contact</a>
+							<a href="searchRecipe.php">Search Recipe</a>
 						</li>
 					</ul>
 				</div>
