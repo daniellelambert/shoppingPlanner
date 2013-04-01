@@ -41,7 +41,7 @@ echo "Remove from Recipe: <input type='checkbox' id='foodCheck' name='food[$incr
 	echo "</div>";
 	echo "<input type='button' value='More Ingredients' onClick='AddIngredient()'> <br/>";
 	echo "Directions: <br/> <textarea form='formID' name='direct'>".$row['instructions']." </textarea> <br/><br/>";
-	echo "Comments: <br/> <textarea form='formID' name='direct'>".$row['comments']." </textarea> <br/><br/>";
+	echo "Comments: <br/> <textarea form='formID' name='comments'>".$row['comments']." </textarea> <br/><br/>";
 	echo "<input type='hidden' name='id' value='".$recipe_id."'/>";
 	echo "<input type='submit' value='Modify!'/>";
 	echo "</form>";

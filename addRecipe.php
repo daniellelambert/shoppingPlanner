@@ -3,7 +3,7 @@
 
 <?php
 session_start();
-#Need to do mysqli escape!
+
 	include "db_connect.php";
 	
 $recipe = $_POST;
