@@ -67,8 +67,10 @@
 												Cook Time: <input type='text' style="width:75px;" name='cook_time'/><br/>
 												<input type="text" value="Comments*" name='comments'onblur="this.value=!this.value?'Comments *':this.value;" onfocus="this.select()" onclick="this.value='';">
 												Main Dish? <input type="checkbox" id='mainDishCBox' onClick="mainDishCheck()">
-												<div id='mainDish' style="width:50px;" style="visibility:hidden" > <input type='number' name='sideDish'> </div>
-												<br/><input type="submit" id="submit" value="Submit">
+												<br/>
+												<div id='mainDish' style="width:50px;" style="visibility:hidden" > <input type='number' name='sideDish' value=-1> </div>
+												<br/><br/>
+												<input type="submit" id="submit" value="Submit">
 											</form>
 										</div>
 									</div>
