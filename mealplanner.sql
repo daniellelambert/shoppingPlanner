@@ -161,7 +161,7 @@ ALTER TABLE `meal_connector`
   ADD CONSTRAINT `meal_connector_ibfk_2` FOREIGN KEY (`meal_plan_id`) REFERENCES `meal_plan` (`meal_plan_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `meal_connector_ibfk_1` FOREIGN KEY (`meal_id`) REFERENCES `meal` (`meal_id`) ON DELETE CASCADE ON UPDATE CASCADE;
   
-INSERT INTO `users` (email, password) VALUES ('test@umw.edu', SHA('test'));
+INSERT INTO `users` (email, password) VALUES ('test@umw.edu', 'test');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

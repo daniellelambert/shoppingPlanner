@@ -5,7 +5,7 @@
 		$pw = $_POST['password'];
 		echo $pw . "<br/>";
 		echo $email;
-		$query = "SELECT * FROM users WHERE email = '$email' AND password = SHA('$pw')";
+		$query = "SELECT * FROM users WHERE email = '$email' AND password = '$pw'";
 		$result = mysqli_query($db, $query);
 		if ($row = mysqli_fetch_array($result)){
 			$_SESSION['email'] = $row['email'];
