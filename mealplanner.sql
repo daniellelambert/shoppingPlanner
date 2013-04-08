@@ -35,6 +35,19 @@ CREATE TABLE IF NOT EXISTS `dish` (
   PRIMARY KEY (`recipe_id`,`meal_id`),
   KEY `meal_id` (`meal_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `user_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `email` varchar(40) NOT NULL,
+  `password` varchar(20) NOT NULL,
+  PRIMARY KEY(`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
 
 -- --------------------------------------------------------
 
@@ -147,6 +160,8 @@ ALTER TABLE `ingredient`
 ALTER TABLE `meal_connector`
   ADD CONSTRAINT `meal_connector_ibfk_2` FOREIGN KEY (`meal_plan_id`) REFERENCES `meal_plan` (`meal_plan_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `meal_connector_ibfk_1` FOREIGN KEY (`meal_id`) REFERENCES `meal` (`meal_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+  
+INSERT INTO `users` (email, password) VALUES ('test@umw.edu', SHA('test'));
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
