@@ -1,6 +1,10 @@
 <?php
+session_start();
   
         include "db_connect.php";
+		
+		
+		
         
 //uncomment this and run it once to insert a mock meal plan into the DB
 //Chances are it will take about a mintue to put everything into the DB.
@@ -21,7 +25,9 @@ if (ISSET($db)){
  
 
 function readableTest ($test, $tabs){
-   
+	
+	
+ 
         foreach ($test as $k=>$v){
             for ($i = 0; $i < $tabs; $i++){
                 echo "\t";
@@ -45,7 +51,8 @@ function readableTest ($test, $tabs){
                
             }
         echo "\n";
-        
+  
+	#print_r($test);  
 
 }
 #Takes a meal plan ID and returns the meal plan
@@ -264,5 +271,15 @@ for ($i = 1; $i < 8; $i++) {
          echo "Successful!";
     }
 
-       
+
+		
+		
+		//In order to get this code below to work
+		//Change the 7 in: getMealPlan (7, $db) to the id of the meal plan in your DB.
+		$mealPlan = getMealPlan (7, $db);
+		$_SESSION['mealPlanArray'] = $mealPlan;
+    
+		echo "<form id='formID' action='recipeListPDF.php' method='POST'> <input type='submit' value='Get Recipe List' /> </form><br/>";
+	
+	   
 ?>
