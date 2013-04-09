@@ -38,7 +38,7 @@
 			<div class="body">
 				<div class="content-about">
 					<div>
-						<h3>Browse Recipes</h3>
+						<h3>Browse Recipes - By Rating</h3>
 					</div>
 					<div class="featured">
 						<img src="images/dining-room.jpg" alt="">
@@ -49,7 +49,7 @@
 							<?php
 		include "db_connect.php";
 		
-		$query = 'SELECT * FROM recipe';
+		$query = 'SELECT * FROM recipe ORDER BY rating DESC';
 		$result = mysqli_query($db, $query);
 		echo '<table cellspacing="20"> <tr><td><h1>Name</h1></td> <td>cook time</td> <td>rating</td> <td>last cook</td></tr>';
 		while (	$row = mysqli_fetch_array($result)){
