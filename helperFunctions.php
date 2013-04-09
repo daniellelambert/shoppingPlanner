@@ -27,7 +27,7 @@ if (ISSET($db)){
 function readableTest ($test, $tabs){
 	
 	
- 
+ 		
         foreach ($test as $k=>$v){
             for ($i = 0; $i < $tabs; $i++){
                 echo "\t";
@@ -50,7 +50,9 @@ function readableTest ($test, $tabs){
             }
                
             }
+			
         echo "\n";
+  		
   
 	#print_r($test);  
 
@@ -279,7 +281,8 @@ for ($i = 1; $i < 8; $i++) {
 		$mealPlan = getMealPlan (7, $db);
 		$_SESSION['mealPlanArray'] = $mealPlan;
     
-		echo "<form id='formID' action='recipeListPDF.php' method='POST'> <input type='submit' value='Get Recipe List' /> </form><br/>";
+		echo "<form id='formID' action='recipeListPDF.php' method='POST' target=\"_blank\"> <input type='submit' value='Get Recipe List' /> </form><br/>";
+		echo "<form id='formID' action='shoppingListPDF.php' method='POST' target=\"_blank\"> <input type='submit' value='Get Shopping List' /> </form><br/>";
 	
 	   
 ?>
