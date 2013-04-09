@@ -1,5 +1,11 @@
 <?php
  session_start();
+ 
+ include "db_connect.php";
+ 
+ if(isSet($_GET['id'])) {
+	$recipe_id = $_GET['id'];
+  }
 ?>
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
@@ -48,18 +54,27 @@
 							</div>
 							<ul>
 								<li>
-									<img src="images/dinner2.png" alt="">
+                                <?
+								
+									$query = "Select pic_location from recipe where recipe_id=$recipe_id";
+									$result = mysqli_query($db,$query) or die("Error Querying Database");
+									$row = mysqli_fetch_array($result);
+									$filename = 'dishIMG/'.$row['pic_location'].'.jpg';
+									
+									if (file_exists($filename)){
+                                		echo '<img src="'.$filename.'" alt="" width="490" height="340">';
+									}
+									else {
+										echo '<img src="images/dinner2.png" alt="">';
+									}
+									
+								?>
 									
 									<div class="section">
 										<div>
 										
                                         <?	
-										
-										include "db_connect.php";
-                                        
-										if(isSet($_GET['id'])) {
-											$recipe_id = $_GET['id'];
-										}
+ 
 	
 										#$query = "Select recipe.*, ingredient.*, food.* From recipe INNER JOIN ingredient INNER JOIN food ON recipe.recipe_id=ingredient.recipe_id and ingredient.food_id=food.food_id WHERE recipe.recipe_id =$recipe_id";
 										$query = "Select * from recipe where recipe_id=$recipe_id";
