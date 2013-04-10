@@ -101,10 +101,11 @@
 													mysqli_query($db, $update_food) OR DIE ($update_food);
 												}
 											}
-											else{
-												
+										else{
+                                                                                    if (!(isset($v['delCheck'])) || $v['delCheck']!='on'){
+
 												   #print_r ($v);
-												echo "  Else Statement <br/>";
+												
 												#Adding new food. 
 													$food_result = getFood($v['Food_Name'], $db);
 												if ($food_result == null){
@@ -125,7 +126,7 @@
 										$unit = mysqli_real_escape_string($db, trim($v['Unit']));
 										$insert_ingredient = "INSERT INTO ingredient VALUES ((select MAX(food.food_id) from food), ".$rec_id.", '$amt', '$unit')";
 										$result_insert_ingredient =mysqli_query($db, $insert_ingredient) OR DIE (mysqli_error($db));
-										 }
+                                                                                                       }}
 												
 												}
 
