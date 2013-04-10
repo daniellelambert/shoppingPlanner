@@ -1,56 +1,6 @@
-<!DOCTYPE html>
-<!-- Website template by freewebsitetemplates.com -->
 <html>
-<head>
-	<meta charset="UTF-8">
-	<title>Add Recipes - Shopping Planner</title>
-	<link rel="stylesheet" href="css/style.css" type="text/css">
-</head>
-<body>
-	<div id="background-lightgreen">
-		background
-	</div>
-	<div class="page">
-		<div class="blog-page">
-			<div class="sidebar">
-				<a href="index.html" id="logo">Shopping <br/>Planner</a>
-				<ul>
-					<li class="home">
-						<a href="index.html">Home</a>
-					</li>
-					<li class="about">
-						<a href="browseRecipes.php">Browse Recipes</a>
-					</li>
-					<li class="projects">
-						<a href="mealPlan.html">Meal Plan</a>
-					</li>
-					<li class="selected blog">
-						<a href="addRecipes.html">Add Recipes</a>
-					</li>
-					<li class="contact">
-						<a href="searchRecipe.php">Search Recipe</a>
-					</li>
-				</ul>
-				<div class="connect">
-					<a href="http://freewebsitetemplates.com/go/facebook/" id="fb">facebook</a> <a href="http://freewebsitetemplates.com/go/twitter/" id="twitter">twitter</a> <a href="http://freewebsitetemplates.com/go/googleplus/" id="googleplus">google+</a> <a href="http://freewebsitetemplates.com/go/youtube/" id="youtube">youtube</a>
-				</div>
-			</div>
-			<div class="body">
-				<div class="content-blog-single">
-					<div>
-						<div>
-							<h3>Add Recipes</h3>
-							<div class="paging">
-								
-							</div>
-							<ul>
-								<li>
-									<img src="images/dinner2.png" alt="">
-									
-									<div class="section">
-										<div>
-											
-											<form id='formID' action='addRecipe.php' method='POST'>
+
+<form id='formID' action='addRecipe.php' method='POST'>
 												<h4>Add Dish</h4>
 												<input type="text" value="Recipe Name*" name='Dish_Name' onblur="this.value=!this.value?'Title *':this.value;" onfocus="this.select()" onclick="this.value='';">
 											<div id='ingredientDiv'> 
@@ -68,60 +18,17 @@
 												<input type="text" value="Comments*" name='comments'onblur="this.value=!this.value?'Comments *':this.value;" onfocus="this.select()" onclick="this.value='';">
 												Main Dish? <input type="checkbox" id='mainDishCBox' onClick="mainDishCheck()">
 												<br/>
-												<div id='mainDish' style="visibility:hidden" > How many side dishes should this be served with?<input type='number' name='sideDish'  value='-1'> </div>
+												<div id='mainDish' style="width:50px;" style="visibility:hidden" > <input type='number' name='sideDish' value=-1> </div>
 												<br/><br/>
 												<input type="submit" id="submit" value="Submit">
-											</form>
-										</div>
-									</div>
-								</li>
-							</ul>
-						</div>
-						<div class="sidebar">
-							<div>
-							
-							</div>
-							
-							<div>
-								
-								<ul>
-									
-								</ul>
-								<ul>
-									
-								</ul>
-							</div>
-							
-						</div>
-					</div>
-				</div>
-				<div class="footer">
-					<p>
-						
-					</p>
-					<ul>
-						<li>
-							<a href="index.html">Home</a>
-						</li>
-						<li>
-							<a href="browseRecipes.php">Browse Recipes</a>
-						</li>
-						<li>
-							<a href="mealPlan.html">Meal Plan</a>
-						</li>
-						<li>
-							<a href="addRecipes.html">Add Recipes</a>
-						</li>
-						<li>
-							<a href="searchRecipe.php">Search Recipe</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-</body>
-</html><script type='text/javascript'>
+</form>
+                                            
+                                            
+
+
+</html>
+
+<script type='text/javascript'>
 /*var mainCheck = document.getElementById('mainCheck');
 var dishChecker = document.createElement('div');
 dishChecker = setAttribute('id', 'dish_checker');
@@ -151,4 +58,5 @@ j++;
 
 }
 
-</script>
+</script>                                            
+                                          
