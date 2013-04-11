@@ -13,11 +13,11 @@ session_start();
         
 //In order to get this code to work
 //Change the 7 in: readableTest(getMealPlan (7, $db) to the id of the meal plan in your DB.
-        
+//        makeTestMealPlan($db);
 
 if (ISSET($db)){
     echo "<textarea cols=100 rows='100' cols='300'>";
-    readableTest(getMealPlan (7, $db), 0);
+    readableTest(getMealPlan (53, $db), 0);
  echo "</textarea>";
 
         
@@ -218,7 +218,7 @@ for ($i = 1; $i < 8; $i++) {
          
         
          for ($j = 1; $j < 4; $j++){
-             $insert_sideRecipe =  "INSERT INTO recipe VALUES (null, 'Side Dish".$i."-".$j."', 'This is side dish".$i."-".$j."','No directions".$i."', '00:15:00', 1, 'Comment For Side Dish".$i."-".$j."', '0000-00-00', CURDATE(),0, 'placeholder')";
+             $insert_sideRecipe =  "INSERT INTO recipe VALUES (null, 'Side Dish".$i."-".$j."', 'This is side dish".$i."-".$j."','No directions".$i."', '00:15:00', 1, 'Comment For Side Dish".$i."-".$j."', '0000-00-00', CURDATE(),-1, 'placeholder')";
              $result_insert_food =mysqli_query($db, $insert_sideRecipe) OR DIE (mysqli_error($db));      
              echo "6<br/>";
              $q_Side = "select MAX(recipe_id) from recipe";
@@ -278,11 +278,11 @@ for ($i = 1; $i < 8; $i++) {
 		
 		//In order to get this code below to work
 		//Change the 7 in: getMealPlan (7, $db) to the id of the meal plan in your DB.
-		$mealPlan = getMealPlan (7, $db);
+/*		$mealPlan = getMealPlan (7, $db);
 		$_SESSION['mealPlanArray'] = $mealPlan;
     
 		echo "<form id='formID' action='recipeListPDF.php' method='POST' target=\"_blank\"> <input type='submit' value='Get Recipe List' /> </form><br/>";
 		echo "<form id='formID' action='shoppingListPDF.php' method='POST' target=\"_blank\"> <input type='submit' value='Get Shopping List' /> </form><br/>";
 	
-	   
+*/	   
 ?>
