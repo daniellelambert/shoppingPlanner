@@ -54,7 +54,7 @@
 							</div>
 							<ul>
 								<li>
-                                <?
+                                <?php
 								
 									$query = "Select pic_location from recipe where recipe_id=$recipe_id";
 									$result = mysqli_query($db,$query) or die("Error Querying Database");
@@ -73,7 +73,7 @@
 									<div class="section">
 										<div>
 										
-                                        <?	
+                                        <?php	
  
 	
 										#$query = "Select recipe.*, ingredient.*, food.* From recipe INNER JOIN ingredient INNER JOIN food ON recipe.recipe_id=ingredient.recipe_id and ingredient.food_id=food.food_id WHERE recipe.recipe_id =$recipe_id";

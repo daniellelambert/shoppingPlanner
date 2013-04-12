@@ -11,6 +11,8 @@
         $ids = array();
             echo "2<br/>";
 
+            
+            #Generates sides for each main dish. All sides choosen are unique for that week
         foreach ($mainDish as $main){
                $sides[$i] = generateSideDishes($db, $main['side_dishes'], $ids);
       #adding the side dish ids, to make sure recipes aren't reused
@@ -33,6 +35,10 @@
         }
         $j = 0;
         $mealsID = array();
+        #This for loop puts the meals together.
+        #1.create/insert a new meal 
+        #2. store the id from the just inserted meal in $mealsID[$j]
+        #3. connect the meal and recipes
         for ($j = 0; $j < 7; $j++){
             #insert meal
         $insert_meal =  "INSERT INTO meal VALUES (null, DATE_ADD(CURDATE(),INTERVAL ".$j." DAY))";
@@ -54,21 +60,22 @@
              $result_insert_dish =mysqli_query($db, $dish_insert) OR DIE (mysqli_error($db));
 
          }
-         
-         #insert meal plan
+        } 
+         #insert/create meal plan
          $insertPlan = "INSERT INTO meal_plan VALUES (null, CURDATE(), 'placehodler')"; 
          $result_insert_plan =mysqli_query($db, $insertPlan) OR DIE (mysqli_error($db));
   
+         #connecting the meal plan to the meal
              foreach ($mealsID as $mid){
                  echo "13<br/>";
-             print_r($mid);
+             //print_r($mid);
              $m_insert = "INSERT INTO meal_connector VALUES (".$mid[0].",(select MAX(meal_plan.meal_plan_id) from meal_plan))";
              $result_insert_dish =mysqli_query($db, $m_insert)OR DIE (mysqli_error($db));
              echo "14<br/>";
 
              
          } 
-        }
+        
   
     
         

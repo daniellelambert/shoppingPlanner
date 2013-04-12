@@ -17,7 +17,7 @@ session_start();
 
 if (ISSET($db)){
     echo "<textarea cols=100 rows='100' cols='300'>";
-    readableTest(getMealPlan (53, $db), 0);
+    readableTest(getMealPlan (16, $db), 0);
  echo "</textarea>";
 
         

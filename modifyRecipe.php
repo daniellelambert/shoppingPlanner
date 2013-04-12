@@ -53,7 +53,7 @@
 									<div class="section">
 										<div>
 										
-                                        <?	
+                                        <?php	
 										
 										include "db_connect.php";
 									  #Wasn't sure where to define this so it works with javascript later. Increment is used in the food/ingredients array, to keep the amount, units, and name seperated.
