@@ -22,7 +22,7 @@
 						<a href="browseRecipes.php">Browse Recipes</a>
 					</li>
 					<li class="projects">
-						<a href="mealPlan.html">Meal Plan</a>
+						<a href="mealPlan.php">Meal Plan</a>
 					</li>
 					<li class="blog">
 						<a href="addRecipes.html">Add Recipes</a>
@@ -127,7 +127,7 @@
 							<a href="browseRecipes.php">About</a>
 						</li>
 						<li>
-							<a href="mealPlan.html">Projects</a>
+							<a href="mealPlan.php">Projects</a>
 						</li>
 						<li>
 							<a href="addRecipes.html">Add Recipe</a>

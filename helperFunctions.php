@@ -1,7 +1,8 @@
 <?php
 session_start();
+
   
-        include "db_connect.php";
+include "db_connect.php";
 		
 		
 		
@@ -16,9 +17,9 @@ session_start();
 //        makeTestMealPlan($db);
 
 if (ISSET($db)){
-    echo "<textarea cols=100 rows='100' cols='300'>";
-    readableTest(getMealPlan (16, $db), 0);
- echo "</textarea>";
+    #echo "<textarea cols=100 rows='100' cols='300'>";
+    #readableTest(getMealPlan (2, $db), 0);
+ #echo "</textarea>";
 
         
     }
@@ -285,4 +286,6 @@ for ($i = 1; $i < 8; $i++) {
 		echo "<form id='formID' action='shoppingListPDF.php' method='POST' target=\"_blank\"> <input type='submit' value='Get Shopping List' /> </form><br/>";
 	
 */	   
+
+
 ?>
