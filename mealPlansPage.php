@@ -63,7 +63,7 @@
 	$result = mysqli_query($db, $query) OR DIE (mysqli_error($db));
 	while (	$row = mysqli_fetch_array($result)){
 	
-		echo "<a href=\"viewOldMealPlan.php?id=".$row[meal_plan_id]."\" target=\"_blank\"> Meal Plan for the Week of: ".$row['week_start']."</br>";
+		echo "<a href=\"viewOldMealPlan.php?id=".$row['meal_plan_id']."\" target=\"_blank\"> Meal Plan for the Week of: ".$row['week_start']."</br>";
 	
 	}
 

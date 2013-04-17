@@ -31,7 +31,7 @@ $update_ingred = "UPDATE recipes SET rating =".$new_rating."WHERE recipe_id =".$
 mysqli_query($db, $update_ingred) OR DIE (mysql1_error($db)); // querying the db
 
 // under the query
-<a href = browseRecipes.php>Continue</a>
+echo "<a href = browseRecipes.php>Continue</a>";
 
 
 

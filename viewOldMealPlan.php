@@ -94,11 +94,11 @@
     		
     			if ($first == true){
     				echo "<b><font size=\"4\">Main Entree:</font></br></b>";
-    				echo "<font size=\"4\"><a href=\"viewRecipe.php?id=".$dish[recipe_id]."\" target=\"_blank\">".$dish['recipe_name']."</br></a></font>";
+    				echo "<font size=\"4\"><a href=\"viewRecipe.php?id=".$dish['recipe_id']."\" target=\"_blank\">".$dish['recipe_name']."</br></a></font>";
     				echo "</br>";
     			}
     			else {
-    				echo "<b>Side Dish:</b> <a href=\"viewRecipe.php?id=".$dish[recipe_id]."\" target=\"_blank\">".$dish['recipe_name']."</br></a>";
+    				echo "<b>Side Dish:</b> <a href=\"viewRecipe.php?id=".$dish['recipe_id']."\" target=\"_blank\">".$dish['recipe_name']."</br></a>";
     			}
     			$first = false;
     		
