@@ -32,9 +32,9 @@ $rec_id = $_GET['id'];
 $new_rating = $_GET['newRating'];
 
 
-$update_ingred = "UPDATE recipes SET rating =".$new_rating."WHERE recipe_id =".$rec_id; // query
+$update_ingred = "UPDATE recipe SET rating =".$new_rating." WHERE recipe_id =".$rec_id; // query
 
-mysqli_query($db, $update_ingred) OR DIE (mysql1_error($db)); // querying the db
+mysqli_query($db, $update_ingred) OR DIE (mysqli_error($db)); // querying the db
 
 // under the query
 echo "<a href = browseRecipes.php>Continue</a>";
