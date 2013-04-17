@@ -141,9 +141,14 @@ if ($food_result == null){
  $unit = mysqli_real_escape_string($db, trim($v['Unit']));
  $insert_ingredient = "INSERT INTO ingredient VALUES ((select MAX(food.food_id) from food), (select MAX(recipe.recipe_id) from recipe), '$amt', '$unit')";
 	$result_insert_ingredient =mysqli_query($db, $insert_ingredient) OR DIE (mysqli_error($db));
+	$id = $food_result['recipe_id'];
+	echo '<meta http-equiv = "REFRESH" content="0;url="viewRecipe.php?id='.$id.'">';
  }
-	echo "<p><a href=\"index.html\">Continue</a></p>";	
-?>
+	
+	
+?>	
+	<p><a href=\"index.html\">Continue</a></p>";	
+
 										</div>
 									</div>
 								</li>
@@ -201,8 +206,21 @@ $query = 'Select * from food where food_name="'.$food_name.'"';
 
 $result = mysqli_query($db, $query);
 	$row = mysqli_fetch_array($result);
+	
 return ($row);
 
 }
 
 ?>
+<script type='text/javascript'>
+
+function validateForm()
+{
+var x=document.forms["myForm"]["fname"].value;
+if (x==null || x=="")
+  {
+  alert("First name must be filled out");
+  return false;
+  }
+}
+</script>

@@ -50,9 +50,9 @@
 									<div class="section">
 										<div>
 											
-											<form id='formID' action='addRecipe.php' method='POST'>
+											<form id='formID' action='addRecipe.php' onsubmit="return validateForm()" method='POST'>
 												<h4>Add Dish</h4>
-												<input type="text" value="Recipe Name*" name='Dish_Name' onblur="this.value=!this.value?'Title *':this.value;" onfocus="this.select()" onclick="this.value='';">
+												<input type="text" value="Recipe Name*" id='Dish_Name' name='Dish_Name' onblur="this.value=!this.value?'Recipe Name *':this.value;" onfocus="this.select()" onclick="this.value='';">
 											<div id='ingredientDiv'> 
 												<table><tr><td><input type="text" style="width:100px;" value="Amount*" id='foodAmount' name='food[0][Amt]' onblur="this.value=!this.value?'Amount *':this.value;" onfocus="this.select()" onclick="this.value='';"></td>
 												<td><input type="text" value="Units*" style="width:100px;" id='Units' name='food[0][Unit]'onblur="this.value=!this.value?'Units *':this.value;" onfocus="this.select()" onclick="this.value='';"></td>
@@ -122,6 +122,17 @@
 	</div>
 </body>
 </html><script type='text/javascript'>
+
+function validateForm()
+{
+var x=document.forms["formID"]["Dish_Name"].value;
+if (x==null || x=="" || x=="Recipe Name*")
+  {
+  alert("Recipe name must be filled out");
+  return false;
+  }
+}
+
 /*var mainCheck = document.getElementById('mainCheck');
 var dishChecker = document.createElement('div');
 dishChecker = setAttribute('id', 'dish_checker');
