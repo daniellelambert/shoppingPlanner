@@ -43,7 +43,7 @@ foreach ($mealPlan['meals'] as $meal){
 		foreach($dish['ingredients'] as $ingredient){
 				
 				$pdf->SetFont('Arial','',10);
-				$pdf->MultiCell(150,2,'Food Item: '.$ingredient['food_name'].'   Store Location: '.$ingredient['store_loc']);
+				$pdf->MultiCell(150,2,'Food Item: '.$ingredient['food_name']);
 				$pdf->Ln( 2 );
 					
 		}
