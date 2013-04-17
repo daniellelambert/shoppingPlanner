@@ -25,18 +25,18 @@ session_start()
 						<a href="browseRecipes.php">Browse Recipes</a>
 					</li>
 					<li class="projects">
-						<a href="mealPlan.html">Meal Plan</a>
+						<a href="mealPlansPage.php">Meal Plan</a>
 					</li>
 					<li class="blog">
 						<a href="addRecipes.php">Add Recipes</a>
 					</li>
 					<li class="contact">
-						<a href="searchRecipe.php">Search Recipe</a>
+						<a href="searchRecipe.php">Search</a>
+					</li>
+					<li class="about">
+						<a href="logout.php">Logout</a>
 					</li>
 				</ul>
-				<div class="connect">
-					<a href="http://freewebsitetemplates.com/go/facebook/" id="fb">facebook</a> <a href="http://freewebsitetemplates.com/go/twitter/" id="twitter">twitter</a> <a href="http://freewebsitetemplates.com/go/googleplus/" id="googleplus">google+</a> <a href="http://freewebsitetemplates.com/go/youtube/" id="youtube">youtube</a>
-				</div>
 			</div>
 			<div class="body">
 				<div class="content-about">
@@ -78,10 +78,7 @@ session_start()
 		}
 	echo '</table>';
 ?>
-								<br><br>
-								<br><br>
-								Ignore this stuff here, I will fix it and format it so it's prettier.  Enter a short description here about the dish.</p><a href="http://www.freewebsitetemplates.com/about/terms">Edit this dish</a> <img src="images/dinner3.png" alt="">
-							<br><br>
+								
 						</div>
 						<div class="sidebar">
 							<div>
@@ -122,17 +119,17 @@ session_start()
 				</div>
 				<div class="footer">
 					<p>
-						&#169; 2023 Origins Interior Architects
+					
 					</p>
 					<ul>
 						<li>
 							<a href="index.php">Home</a>
 						</li>
 						<li>
-							<a href="browseRecipes.php">About</a>
+							<a href="browseRecipes.php">Browse Recipes</a>
 						</li>
 						<li>
-							<a href="mealPlan.html">Projects</a>
+							<a href="mealPlansPage.php">Meal Plans</a>
 						</li>
 						<li>
 							<a href="addRecipes.php">Add Recipe</a>

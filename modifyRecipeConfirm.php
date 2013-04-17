@@ -16,22 +16,25 @@
 	<div class="page">
 		<div class="blog-page">
 			<div class="sidebar">
-				<a href="index.html" id="logo">Shopping <br/>Planner</a>
+				<a href="index.php" id="logo">Shopping <br/>Planner</a>
 				<ul>
 					<li class="home">
-						<a href="index.html">Home</a>
+						<a href="index.php">Home</a>
 					</li>
 					<li class="about">
 						<a href="browseRecipes.php">Browse Recipes</a>
 					</li>
 					<li class="projects">
-						<a href="mealPlan.html">Meal Plan</a>
+						<a href="mealPlansPage.php">Meal Plan</a>
 					</li>
 					<li class="selected blog">
 						<a href="addRecipes.php">Add Recipes</a>
 					</li>
 					<li class="contact">
 						<a href="searchRecipe.php">Search</a>
+					</li>
+					<li class="about">
+						<a href="logout.php">Logout</a>
 					</li>
 				</ul>
 				

@@ -37,6 +37,9 @@ if (!isset($_SESSION['email'])){
 					<li class="contact">
 						<a href="searchRecipe.php">Search</a>
 					</li>
+					<li class="about">
+						<a href="logout.php">Logout</a>
+					</li>
 				</ul>
 			</div>
 			<div class="body">
@@ -111,7 +114,7 @@ if (!isset($_SESSION['email'])){
 							<a href="browseRecipes.php">Browse Recipes</a>
 						</li>
 						<li>
-							<a href="mealPlan.php">Meal Plan</a>
+							<a href="mealPlansPage.php">Meal Plans</a>
 						</li>
 						<li>
 							<a href="mealPlansPage.php">Add Recipes</a>
@@ -119,6 +122,7 @@ if (!isset($_SESSION['email'])){
 						<li>
 							<a href="searchRecipe.php">Search Recipe</a>
 						</li>
+
 					</ul>
 				</div>
 			</div>

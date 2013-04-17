@@ -37,6 +37,9 @@
 					<li class="contact">
 						<a href="searchRecipe.php">Search</a>
 					</li>
+					<li class="about">
+						<a href="logout.php">Logout</a>
+					</li>
 				</ul>
 				
 			</div>
