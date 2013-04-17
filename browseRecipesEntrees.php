@@ -56,7 +56,7 @@ session_start()
 		
 		$query = 'SELECT * FROM recipe WHERE side_dishes <> -1';
 		$result = mysqli_query($db, $query);
-		echo '<table cellspacing="20"> <tr><td><h1>Name</h1></td> <td>cook time</td> <td>rating</td> <td>last cook</td></tr>';
+		echo '<table cellspacing="20"> <tr><td><h1>Name</h1></td> <td>cook time</td> <td>rating</td></tr>';
 		while (	$row = mysqli_fetch_array($result)){
 	#recipe order: id, name, description, instructions(directions), cook_time, rating, comments, last_cook_week, date_added, side_dishes, pic_location	
 	echo '<tr>';
@@ -71,7 +71,7 @@ session_start()
 		$added = $row['date_added'];
 		$side_dishes = $row['side_dishes'];
 		$pic = $row['pic_location'];
-	echo '<td><a href="viewRecipe.php?id='.$id.'"><h1>'.$name.' </a></h1></td><td>'.$cook_time.'</td><td>'.$rating.'</td><td>'.$last_cook.'</td>';
+	echo '<td><a href="viewRecipe.php?id='.$id.'"><h1>'.$name.' </a></h1></td><td>'.$cook_time.'</td><td>'.$rating.'</td>';
 	
 	echo '</tr>';
 
@@ -83,7 +83,7 @@ session_start()
 						<div class="sidebar">
 							<div>
 								<h3>Browse By</h3>
-								<a href="browseRecipesEntrees.php">Entrees</a> <a href="browseRecipesSides.php">Side Dishes</a><a href="browseRecipesRatings.php">Ratings</a><a href="#">Favorites</a>
+								<a href="browseRecipesEntrees.php">Entrees</a> <a href="browseRecipesSides.php">Side Dishes</a><a href="browseRecipesRatings.php">Ratings</a>
 							</div>
 							<div>
 								<h3>Search</h3>
