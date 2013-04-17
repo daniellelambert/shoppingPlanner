@@ -1,37 +1,31 @@
 <?php
-session_start()
+	include "db_connect.php";
+	include "helperFunctions.php";
 ?>
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
 <html>
 <head>
-<?php
-	include "db_connect.php";
-	
-	if (!isset($_SESSION['email'])){
-		?><meta http-equiv = "REFRESH" content="0;url=login.html"><?php } ?>
-		
 	<meta charset="UTF-8">
-	<title>Shopping Planner</title>
+	<title>Meal Plan - Shopping Planner</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 <body>
-	<div id="background-green">
+	<div id="background-lightyellow">
 		background
 	</div>
 	<div class="page">
-		<div class="home-page">
+		<div class="project-page">
 			<div class="sidebar">
-				
 				<a href="index.html" id="logo">Shopping <br/>Planner</a>
 				<ul>
-					<li class="selected home">
+					<li class="home">
 						<a href="index.html">Home</a>
 					</li>
 					<li class="about">
 						<a href="browseRecipes.php">Browse Recipes</a>
 					</li>
-					<li class="projects">
+					<li class="selected projects">
 						<a href="mealPlansPage.php">Meal Plan</a>
 					</li>
 					<li class="blog">
@@ -46,42 +40,66 @@ session_start()
 				</div>
 			</div>
 			<div class="body">
-				<div class="content-home">
+				<div class="content-project">
 					<div>
-						<h3>Make healthy <span class="beauty">home-made</span> meals today with your <span class="function">Shoppping Planner!</span> Don't let <span class="works">time</span> go to waste.</h3>
-						<p>
-							Your shopping planner is here to save you time!  Just begin by adding all your recipes into the system.  Your planner will generate a seven day meal plan with recipes and a shopping list so you can plan your week accordingly.  Feel free to change the Meal Plan as you please!
-						</p>
+						<h3>Meal Plan</h3>
 					</div>
-					<div class="featured">
-						<img src="images/yum.jpg" alt="">
+					<div class="navigation">
+						
+						</ul>
 					</div>
 					<div>
 						<ul>
 							<li>
-								<a href="mealPlan.html"><img src="images/bg-projects.jpg" alt=""></a>
-								<h4><a href="mealPlansPage.php">Meal Plan</a></h4>
-								<h3><a href="mealPlansPage.php">Create your own Meal Plan</a></h3>
-								<p>
-									
-								</p>
-								<a href="mealPlan.html"></a>
+							
+	<a href="mealPlan.php"><h3>RANDOM GENERATE MEAL PLAN</h3></a>
+	<a href="createNewMealPlan.php"><h3>CREATE NEW MEAL PLAN</h3></a>
+	</br>
+	
+	<h4>Archived Meal Plans</h4>						
+<?php						
+
+	
+
+      
+?>
+							
 							</li>
 							<li>
-								<a href="addRecipes.html"><img src="images/bg-blog.jpg" alt=""></a>
-								<h4><a href="addRecipes.html">Search</a></h4>
-								<h3><a href="addRecipes.html">Search for Recipes</a></h3>
-								<p>
-									
-								</p>
-								<a href="addRecipes.html"></a>
+								
+							</li>
+							<li>
+								
+							</li>
+							<li>
+							
+							</li>
+							<li>
+								
+							</li>
+							<li>
+								
 							</li>
 						</ul>
+						<div class="paging">
+							<ul>
+								<li class="selected">
+									<a href="#">1</a>
+								</li>
+								<li>
+									<a href="#">2</a>
+								</li>
+								<li>
+									<a href="#">></a>
+								</li>
+							</ul>
+							<span>Page 1 of 2</span>
+						</div>
 					</div>
 				</div>
 				<div class="footer">
 					<p>
-						Last Updated March 27, 2013
+						&#169; 2023 Origins Interior Architects
 					</p>
 					<ul>
 						<li>
@@ -91,7 +109,7 @@ session_start()
 							<a href="browseRecipes.php">Browse Recipes</a>
 						</li>
 						<li>
-							<a href="mealPlansPage.php">Meal Plans</a>
+							<a href="mealPlansPage.php">Meal Plan</a>
 						</li>
 						<li>
 							<a href="addRecipes.html">Add Recipes</a>

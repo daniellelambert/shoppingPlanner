@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	include "db_connect.php";
 	include "helperFunctions.php";
 ?>
@@ -26,7 +27,7 @@
 						<a href="browseRecipes.php">Browse Recipes</a>
 					</li>
 					<li class="selected projects">
-						<a href="mealPlan.php">Meal Plan</a>
+						<a href="mealPlansPage.php">Meal Plan</a>
 					</li>
 					<li class="blog">
 						<a href="addRecipes.html">Add Recipes</a>
@@ -54,10 +55,10 @@
 								<a href="#">Meal Plan</a>
 							</li>
 							<li>
-								<a href="#">Shopping List</a>
+								<a href="shoppingListPDF.php" target=\"_blank\">Shopping List</a>
 							</li>
 							<li>
-								<a href="#">Recipes</a>
+								<a href="recipeListPDF.php" target=\"_blank\">Recipes</a>
 							</li>
 							<li>
 								
@@ -164,17 +165,26 @@
   
     	$mealPlan = getMealPlan ($mealId, $db);
     	#print_r($mealPlan);
+    	$_SESSION['mealPlanArray'] = $mealPlan;
     	
-    	echo "<b>Meal Plan For The Week Of ".$mealPlan['week_start']."</b></br></br>";
+    	echo "<h1><b>Meal Plan For The Week Of ".$mealPlan['week_start']."</b></br></br></h1>";
     	
     	foreach ($mealPlan['meals'] as $meal){
     	
-    		echo "<b>".$meal['cook_date']."</b></br>";
-    	
+    		echo "<h2><b>".$meal['cook_date']."</b></br></h2>";
+    		
+    		$first = true;
     		foreach($meal['dishes'] as $dish){
     		
-    			echo "Dish Name: ".$dish['recipe_name']."</br>";
-    		
+    			if ($first == true){
+    				echo "<b><font size=\"4\">Main Entree:</font></br></b>";
+    				echo "<font size=\"4\"><a href=\"viewRecipe.php?id=".$dish[recipe_id]."\" target=\"_blank\">".$dish['recipe_name']."</br></a></font>";
+    				echo "</br>";
+    			}
+    			else {
+    				echo "<b>Side Dish:</b> <a href=\"viewRecipe.php?id=".$dish[recipe_id]."\" target=\"_blank\">".$dish['recipe_name']."</br></a>";
+    			}
+    			$first = false;
     		
     		}
     		
@@ -282,7 +292,7 @@
 							<a href="browseRecipes.php">Browse Recipes</a>
 						</li>
 						<li>
-							<a href="mealPlan.php">Meal Plan</a>
+							<a href="mealPlansPage.php">Meal Plan</a>
 						</li>
 						<li>
 							<a href="addRecipes.html">Add Recipes</a>
