@@ -22,10 +22,10 @@
 						<a href="browseRecipes.php">Browse Recipes</a>
 					</li>
 					<li class="projects">
-						<a href="mealPlan.html">Meal Plan</a>
+						<a href="mealPlansPage.html">Meal Plan</a>
 					</li>
 					<li class="selected blog">
-						<a href="addRecipes.html">Add Recipes</a>
+						<a href="addRecipes.php">Add Recipes</a>
 					</li>
 					<li class="contact">
 						<a href="searchRecipe.php">Search Recipe</a>
@@ -179,7 +179,7 @@ if ($food_result == null){
 							<a href="browseRecipes.php">Browse Recipes</a>
 						</li>
 						<li>
-							<a href="mealPlan.html">Meal Plan</a>
+							<a href="mealPlansPage.php">Meal Plan</a>
 						</li>
 						<li>
 							<a href="addRecipes.html">Add Recipes</a>

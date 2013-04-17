@@ -26,7 +26,7 @@
 						<a href="browseRecipes.php">Browse Recipes</a>
 					</li>
 					<li class="selected projects">
-						<a href="mealPlan.php">Meal Plan</a>
+						<a href="mealPlansPage.php">Meal Plan</a>
 					</li>
 					<li class="blog">
 						<a href="addRecipes.html">Add Recipes</a>
@@ -145,7 +145,7 @@ echo "</br></br>";
 							<a href="browseRecipes.php">Browse Recipes</a>
 						</li>
 						<li>
-							<a href="mealPlan.php">Meal Plan</a>
+							<a href="mealPlansPage.php">Meal Plan</a>
 						</li>
 						<li>
 							<a href="addRecipes.html">Add Recipes</a>

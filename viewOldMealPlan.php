@@ -1,6 +1,10 @@
 <?php
 	include "db_connect.php";
 	include "helperFunctions.php";
+	
+	if(isSet($_GET['id'])) {
+		$plan_id = $_GET['id'];
+ 	 }
 ?>
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
@@ -45,29 +49,67 @@
 						<h3>Meal Plan</h3>
 					</div>
 					<div class="navigation">
-						
+						<span>View:</span>
+						<ul>
+							<li class="selected">
+								<a href="#">All</a>
+							</li>
+							<li>
+								<a href="#">Meal Plan</a>
+							</li>
+							<li>
+								<a href="shoppingListPDF.php" target=\"_blank\">Shopping List</a>
+							</li>
+							<li>
+								<a href="recipeListPDF.php" target=\"_blank\">Recipes</a>
+							</li>
+							<li>
+								
+							</li>
+							<li>
+								
+							</li>
 						</ul>
 					</div>
 					<div>
 						<ul>
 							<li>
-							
-	<a href="mealPlan.php"><h3>RANDOM GENERATE MEAL PLAN</h3></a>
-	<a href="createNewMealPlan.php"><h3>CREATE NEW MEAL PLAN</h3></a>
-	</br>
-	
-	<h4>Archived Meal Plans</h4>						
 <?php						
+        
+        
+        //DISPLAY MEAL PLAN
+  
+    	$mealPlan = getMealPlan ($plan_id, $db);
+    	#print_r($mealPlan);
+    	$_SESSION['mealPlanArray'] = $mealPlan;
+    	
+    	echo "<h1><b>Meal Plan For The Week Of ".$mealPlan['week_start']."</b></br></br></h1>";
+    	
+    	foreach ($mealPlan['meals'] as $meal){
+    	
+    		echo "<h2><b>".$meal['cook_date']."</b></br></h2>";
+    		
+    		$first = true;
+    		foreach($meal['dishes'] as $dish){
+    		
+    			if ($first == true){
+    				echo "<b><font size=\"4\">Main Entree:</font></br></b>";
+    				echo "<font size=\"4\"><a href=\"viewRecipe.php?id=".$dish[recipe_id]."\" target=\"_blank\">".$dish['recipe_name']."</br></a></font>";
+    				echo "</br>";
+    			}
+    			else {
+    				echo "<b>Side Dish:</b> <a href=\"viewRecipe.php?id=".$dish[recipe_id]."\" target=\"_blank\">".$dish['recipe_name']."</br></a>";
+    			}
+    			$first = false;
+    		
+    		}
+    		
+    		echo "</br></br>";
+    	
+    	
+    	}
+    	
 
-	$query = "SELECT * FROM meal_plan";
-	$result = mysqli_query($db, $query) OR DIE (mysqli_error($db));
-	while (	$row = mysqli_fetch_array($result)){
-	
-		echo "<a href=\"viewOldMealPlan.php?id=".$row[meal_plan_id]."\" target=\"_blank\"> Meal Plan for the Week of: ".$row['week_start']."</br>";
-	
-	}
-
-      
 ?>
 							
 							</li>

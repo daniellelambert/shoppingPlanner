@@ -159,6 +159,7 @@
         
         //DISPLAY MEAL PLAN
         $queryId = "select MAX(meal_plan.meal_plan_id) as meal_id from meal_plan";
+        #echo $queryId;
         $result = mysqli_query($db, $queryId) OR DIE (mysqli_error($db));
         $row = mysqli_fetch_array($result);
         $mealId = $row['meal_id'];
