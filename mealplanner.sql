@@ -42,7 +42,28 @@ CREATE TABLE IF NOT EXISTS `dish` (
 --
 
 
--- --------------------------------------------------------
+-- -------------------------------------------------------- 
+ 
+--
+-- Table structure for table `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+ `user_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+ `email` varchar(40) NOT NULL,
+ `password` varchar(20) NOT NULL,
+ PRIMARY KEY(`user_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`user_id`, `email`, `password`) VALUES
+(1, 'test@umw.edu', 'test');
+
+-- -------------------------------------------------------- 
+
 
 --
 -- Table structure for table `food`

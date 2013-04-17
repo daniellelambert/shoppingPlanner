@@ -9,12 +9,12 @@
 		$result = mysqli_query($db, $query);
 		if ($row = mysqli_fetch_array($result)){
 			$_SESSION['email'] = $row['email'];
-			?><html> <meta http-equiv = "REFRESH" content="0;url=index.html"> </html>
+			?><html> <meta http-equiv = "REFRESH" content="0;url=index.php"> </html>
 		<?php
 		}
 		else{
 			echo "<p> Account not found </p>";
-			?><html><meta http-equiv = "REFRESH" content="10;url=login.html"></html><?php
+			?><html><meta http-equiv = "REFRESH" content="5;url=login.html"></html><?php
 		}
 	
 	?>

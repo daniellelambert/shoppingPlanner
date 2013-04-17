@@ -23,10 +23,10 @@ session_start()
 		<div class="home-page">
 			<div class="sidebar">
 				
-				<a href="index.html" id="logo">Shopping <br/>Planner</a>
+				<a href="index.php" id="logo">Shopping <br/>Planner</a>
 				<ul>
 					<li class="selected home">
-						<a href="index.html">Home</a>
+						<a href="index.php">Home</a>
 					</li>
 					<li class="about">
 						<a href="browseRecipes.php">Browse Recipes</a>
@@ -85,7 +85,7 @@ session_start()
 					</p>
 					<ul>
 						<li>
-							<a href="index.html">Home</a>
+							<a href="index.php">Home</a>
 						</li>
 						<li>
 							<a href="browseRecipes.php">Browse Recipes</a>
