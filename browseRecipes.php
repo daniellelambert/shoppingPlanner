@@ -72,7 +72,7 @@ session_start()
 		$added = $row['date_added'];
 		$side_dishes = $row['side_dishes'];
 		$pic = $row['pic_location'];
-	echo '<td><a href="viewRecipe.php?id='.$id.'"><h1>'.$name.' </a></h1></td><td>'.$cook_time.'</td><td>'.$rating.'</td><td><form action="rating.php" method="GET"><select>
+	echo '<td><a href="viewRecipe.php?id='.$id.'"><h1>'.$name.' </a></h1></td><td>'.$cook_time.'</td><td>'.$rating.'</td><td><form action="rating.php?id='.$id.'" method="GET"><select name="newRating">
   <option value="1">1</option>
   <option value="2">2</option>
   <option value="3">3</option>

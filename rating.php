@@ -24,9 +24,13 @@ include "db_connect.php";
 //it should look something like this
 //UPDATE recipes SET rating = $new_rating WHERE recipe_id = $rec_id
 
+if(isSet($_GET['id'])) {
+	$rec_id = $_GET['id'];
+  }
+$rec_id = $_GET['id'];
 
-$rec_id = $_GET['rec_id'];
-$new_rating = $_GET['rating'];
+$new_rating = $_GET['newRating'];
+
 
 $update_ingred = "UPDATE recipes SET rating =".$new_rating."WHERE recipe_id =".$rec_id; // query
 
