@@ -31,12 +31,10 @@
 						<a href="addRecipes.php">Add Recipes</a>
 					</li>
 					<li class="contact">
-						<a href="searchRecipe.php">Search Recipe</a>
+						<a href="searchRecipe.php">Search</a>
 					</li>
 				</ul>
-				<div class="connect">
-					<a href="http://freewebsitetemplates.com/go/facebook/" id="fb">facebook</a> <a href="http://freewebsitetemplates.com/go/twitter/" id="twitter">twitter</a> <a href="http://freewebsitetemplates.com/go/googleplus/" id="googleplus">google+</a> <a href="http://freewebsitetemplates.com/go/youtube/" id="youtube">youtube</a>
-				</div>
+				
 			</div>
 			<div class="body">
 				<div class="content-blog-single">
@@ -176,13 +174,13 @@
 					</p>
 					<ul>
 						<li>
-							<a href="index.html">Home</a>
+							<a href="index.php">Home</a>
 						</li>
 						<li>
 							<a href="browseRecipes.php">Browse Recipes</a>
 						</li>
 						<li>
-							<a href="mealPlan.html">Meal Plan</a>
+							<a href="mealPlan.php">Meal Plan</a>
 						</li>
 						<li>
 							<a href="addRecipes.php">Add Recipes</a>

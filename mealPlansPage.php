@@ -36,12 +36,10 @@ session_start();
 						<a href="addRecipes.php">Add Recipes</a>
 					</li>
 					<li class="contact">
-						<a href="searchRecipe.php">Search Recipe</a>
+						<a href="searchRecipe.php">Search</a>
 					</li>
 				</ul>
-				<div class="connect">
-					<a href="http://freewebsitetemplates.com/go/facebook/" id="fb">facebook</a> <a href="http://freewebsitetemplates.com/go/twitter/" id="twitter">twitter</a> <a href="http://freewebsitetemplates.com/go/googleplus/" id="googleplus">google+</a> <a href="http://freewebsitetemplates.com/go/youtube/" id="youtube">youtube</a>
-				</div>
+				
 			</div>
 			<div class="body">
 				<div class="content-project">
@@ -56,7 +54,7 @@ session_start();
 						<ul>
 							<li>
 							
-	<a href="mealPlan.php"><h3>RANDOM GENERATE MEAL PLAN</h3></a>
+	<a href="mealPlan.php"><h3>GENERATE RANDOM MEAL PLAN</h3></a>
 	<a href="createNewMealPlan.php"><h3>CREATE NEW MEAL PLAN</h3></a>
 	</br>
 	
@@ -92,24 +90,14 @@ session_start();
 							</li>
 						</ul>
 						<div class="paging">
-							<ul>
-								<li class="selected">
-									<a href="#">1</a>
-								</li>
-								<li>
-									<a href="#">2</a>
-								</li>
-								<li>
-									<a href="#">></a>
-								</li>
-							</ul>
-							<span>Page 1 of 2</span>
+							
+							<span></span>
 						</div>
 					</div>
 				</div>
 				<div class="footer">
 					<p>
-						&#169; 2023 Origins Interior Architects
+					
 					</p>
 					<ul>
 						<li>
