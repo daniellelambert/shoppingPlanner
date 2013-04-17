@@ -1,5 +1,5 @@
 <?php
-session_start()
+session_start();
 
 #Still working on actually updating the recipe. 
 	include "db_connect.php";

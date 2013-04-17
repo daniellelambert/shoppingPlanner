@@ -1,5 +1,5 @@
 <?php
-session_start()
+session_start();
 
 #start date
         include "db_connect.php";
@@ -61,6 +61,6 @@ $plan = $_POST;
         */
          
 
-	echo "<p><a href=\"index.html\">Continue</a></p>";	
+	echo "<p><a href=\"index.php\">Continue</a></p>";	
 
 ?>
