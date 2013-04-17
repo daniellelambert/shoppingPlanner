@@ -19,14 +19,13 @@ include "db_connect.php";
 	
 	}
 	else {
-	//	echo "<scirpt>alert('An error has occured somewhere');</script>";
+	//	echo "<script>alert('An error has occured somewhere');</script>";
 	}
 	
 
 
  ?>
-</table>
-</div>
+
 
 </body>
 </html>
