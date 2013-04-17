@@ -55,7 +55,7 @@
 								<a href="#">All</a>
 							</li>
 							<li>
-								<a href="#">Meal Plan</a>
+								<a href="mealPlansPage.php">Meal Plans</a>
 							</li>
 							<li>
 								<a href="shoppingListPDF.php" target=\"_blank\">Shopping List</a>

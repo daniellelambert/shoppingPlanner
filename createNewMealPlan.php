@@ -45,24 +45,9 @@
 						<h3>Meal Plan</h3>    
 					</div>
 					<div class="navigation">
-						<span>View:</span>
+						<span>Create A New Meal Plan!</span>
 						<ul>
-							<li class="selected">
-								<a href="#">All</a>
-							</li>
-							<li>
-								<a href="#">Meal Plan</a>
-							</li>
-							<li>
-								<a href="#">Shopping List</a>
-							</li>
-							<li>
-								<a href="#">Recipes</a>
-							</li>
-							<li>
-								
-							</li>
-							<li>
+
 								
 							</li>
 						</ul>
@@ -72,7 +57,6 @@
 							<li>
         <?php
         #start date
-      echo "<p>Enter a new meal plan! </p> <br/> ";
         #meal plan
         
         echo "<b>Meal Plan </b></br></br>";
