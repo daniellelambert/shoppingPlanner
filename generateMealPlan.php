@@ -1,5 +1,9 @@
 <?php
+session_start()
+
 	include "db_connect.php";
+			if (!isset($_SESSION['email'])){
+		?><meta http-equiv = "REFRESH" content="0;url=login.html"><?php } 
     echo "1<br/>";
 #generate main dish
         $meals = array();

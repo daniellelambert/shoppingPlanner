@@ -28,7 +28,7 @@
 						<a href="mealPlan.html">Meal Plan</a>
 					</li>
 					<li class="selected blog">
-						<a href="addRecipes.html">Add Recipes</a>
+						<a href="addRecipes.php">Add Recipes</a>
 					</li>
 					<li class="contact">
 						<a href="searchRecipe.php">Search Recipe</a>
@@ -58,6 +58,8 @@
 										
 										#Still working on actually updating the recipe. 
 											include "db_connect.php";
+													if (!isset($_SESSION['email'])){
+		?><meta http-equiv = "REFRESH" content="0;url=login.html"><?php } 
 										#Getting values from form
 										$recipe = $_POST;
 										$rec_id = mysqli_real_escape_string($db, trim($recipe['id']));
@@ -183,7 +185,7 @@
 							<a href="mealPlan.html">Meal Plan</a>
 						</li>
 						<li>
-							<a href="addRecipes.html">Add Recipes</a>
+							<a href="addRecipes.php">Add Recipes</a>
 						</li>
 						<li>
 							<a href="searchRecipe.php">Search Recipe</a>

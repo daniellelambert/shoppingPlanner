@@ -35,7 +35,7 @@ session_start()
 						<a href="mealPlansPage.php">Meal Plan</a>
 					</li>
 					<li class="blog">
-						<a href="addRecipes.html">Add Recipes</a>
+						<a href="addRecipes.php">Add Recipes</a>
 					</li>
 					<li class="contact">
 						<a href="searchRecipe.php">Search Recipe</a>
@@ -68,13 +68,13 @@ session_start()
 								<a href="mealPlan.html"></a>
 							</li>
 							<li>
-								<a href="addRecipes.html"><img src="images/bg-blog.jpg" alt=""></a>
-								<h4><a href="addRecipes.html">Search</a></h4>
-								<h3><a href="addRecipes.html">Search for Recipes</a></h3>
+								<a href="addRecipes.php"><img src="images/bg-blog.jpg" alt=""></a>
+								<h4><a href="addRecipes.php">Search</a></h4>
+								<h3><a href="addRecipes.php">Search for Recipes</a></h3>
 								<p>
 									
 								</p>
-								<a href="addRecipes.html"></a>
+								<a href="addRecipes.php"></a>
 							</li>
 						</ul>
 					</div>
@@ -94,7 +94,7 @@ session_start()
 							<a href="mealPlansPage.php">Meal Plans</a>
 						</li>
 						<li>
-							<a href="addRecipes.html">Add Recipes</a>
+							<a href="addRecipes.php">Add Recipes</a>
 						</li>
 						<li>
 							<a href="searchRecipe.php">Search Recipe</a>

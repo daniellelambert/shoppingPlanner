@@ -2,6 +2,8 @@
  session_start();
  
  include "db_connect.php";
+ 		if (!isset($_SESSION['email'])){
+		?><meta http-equiv = "REFRESH" content="0;url=login.html"><?php } 
  
  if(isSet($_GET['id'])) {
 	$recipe_id = $_GET['id'];
@@ -36,7 +38,7 @@
 						<a href="mealPlan.html">Meal Plan</a>
 					</li>
 					<li class="selected blog">
-						<a href="addRecipes.html">Add Recipes</a>
+						<a href="addRecipes.php">Add Recipes</a>
 					</li>
 					<li class="contact">
 						<a href="searchRecipe.php">Search Recipe</a>
@@ -149,7 +151,7 @@
 							<a href="mealPlan.html">Meal Plan</a>
 						</li>
 						<li>
-							<a href="addRecipes.html">Add Recipes</a>
+							<a href="addRecipes.php">Add Recipes</a>
 						</li>
 						<li>
 							<a href="searchRecipe.php">Search Recipe</a>

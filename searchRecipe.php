@@ -1,3 +1,6 @@
+<?php
+session_start()
+?>
 <!DOCTYPE html>
 <!-- Website template by freewebsitetemplates.com -->
 <html>
@@ -25,7 +28,7 @@
 						<a href="mealPlansPage.php">Meal Plan</a>
 					</li>
 					<li class="blog">
-						<a href="addRecipes.html">Add Recipes</a>
+						<a href="addRecipes.php">Add Recipes</a>
 					</li>
 					<li class="selected contact">
 						<a href="searchRecipe.php">Search Recipe</a>
@@ -50,10 +53,13 @@
 									<div class="section">
 										<div>
 											<?php
+											if (!isset($_SESSION['email'])){
+		?><meta http-equiv = "REFRESH" content="0;url=login.html"><?php } 
 											
 											if (isset($_POST['search'])){
 											
 											include "db_connect.php";
+													
 											
 											
 											
@@ -133,7 +139,7 @@
 							<a href="mealPlansPage.php">Meal Plan</a>
 						</li>
 						<li>
-							<a href="addRecipes.html">Add Recipes</a>
+							<a href="addRecipes.php">Add Recipes</a>
 						</li>
 						<li>
 							<a href="searchRecipe.php">Search Recipe</a>

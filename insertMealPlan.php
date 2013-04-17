@@ -1,6 +1,10 @@
 <?php
+session_start()
+
 #start date
         include "db_connect.php";
+				if (!isset($_SESSION['email'])){
+		?><meta http-equiv = "REFRESH" content="0;url=login.html"><?php } 
 $plan = $_POST;
 
 

@@ -1,6 +1,10 @@
 <?php
+session_start()
+
 #Still working on actually updating the recipe. 
 	include "db_connect.php";
+			if (!isset($_SESSION['email'])){
+		?><meta http-equiv = "REFRESH" content="0;url=login.html"><?php } 
 #Getting values from form
 $recipe = $_POST;
 $rec_id = mysqli_real_escape_string($db, trim($recipe['id']));
