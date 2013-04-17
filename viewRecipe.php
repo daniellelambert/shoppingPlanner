@@ -14,6 +14,8 @@
 	<meta charset="UTF-8">
 	<title>Add Recipes - Shopping Planner</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"
+    type="text/javascript"></script>
 </head>
 <body>
 	<div id="background-lightgreen">
@@ -103,7 +105,7 @@
 										echo "<h4>Instructions:</h4>";
 										echo $row['instructions'].'<br/>';
 										echo "<form id='formID' action='modifyRecipe.php' method='POST'> <input type='hidden' name='id' value=".$recipe_id." /> <input type='submit' value='Modify This Recipe!' /> </form><br/>";
-										echo "<form id='formID' action='deleteRecipe.php' method='POST'> <input type='hidden' name='id' value=".$recipe_id." /> <input type='submit' value='Delete This Recipe!' /> </form>";
+										echo "<form id='deleteform' onsubmit='deleteRecipe()' action='deleteRecipe.php'  method='POST'> <input type='hidden' name='id' value=".$recipe_id." /> <input type='submit' value='Delete This Recipe!' onsubmit='deleteRecipe()'/> </form>";
 										
                                         
                                         ?>
@@ -159,6 +161,13 @@
 	</div>
 </body>
 </html><script type='text/javascript'>
+
+    function deleteRecipe() {
+	
+        alert('That recipe was deleted.It tasted bad anyway.');
+        
+	}
+
 /*var mainCheck = document.getElementById('mainCheck');
 var dishChecker = document.createElement('div');
 dishChecker = setAttribute('id', 'dish_checker');
@@ -182,10 +191,6 @@ newBox.setAttribute('id', 'ingredients'+j);
 newBox.innerHTML = ("<table><tr><td><input type='text' style='width:100px;' value='Amount*' id='foodAmount' name='food["+j+"][Amt]'onblur='this.value=!this.value?'Amount *':this.value;' onfocus='this.select()' onclick='this.value='';'></td> <td><input type='text' value='Units*' style='width:100px;' id='Units' name='food["+j+"][Unit]'onblur='this.value=!this.value?'Units *':this.value;' onfocus='this.select()' onclick='this.value='';'></td><td><input type='text' style='width:100px;' value='Of*' id='food_Name' name='food["+j+"][Food_Name]' onblur='this.value=!this.value?'of *':this.value;' onfocus='this.select()' onclick='this.value='';'></td></tr></table>");
 content.appendChild (newBox);
 j++;
-
-												
-
-
 }
 
 </script>
