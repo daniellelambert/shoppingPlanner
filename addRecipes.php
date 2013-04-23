@@ -133,12 +133,38 @@ if (!isset($_SESSION['email'])){
 
 function validateForm()
 {
+//check for dish name
 var x=document.forms["formID"]["Dish_Name"].value;
 if (x==null || x=="" || x=="Recipe Name*")
   {
   alert("Recipe name must be filled out");
   return false;
   }
+
+//check for ingredients  
+var x=document.forms["formID"]["food_Name"].value;
+if (x==null || x=="" || x=="Of*" || x=="of *")
+  {
+  alert("This recipe needs ingredients");
+  return false;
+  }
+  
+  //check for directions 
+var x=document.forms["formID"]["directions"].value;
+if (x==null || x=="" || x=="Directions")
+  {
+  alert("This recipe needs directions!");
+  return false;
+  }
+ 
+   //check for cooktime
+var x=document.forms["formID"]["cook_time"].value;
+if (x==null || x=="" || x=="00:00:00")
+  {
+  alert("This recipe needs a cook time!");
+  return false;
+  }
+  
 }
 
 /*var mainCheck = document.getElementById('mainCheck');
